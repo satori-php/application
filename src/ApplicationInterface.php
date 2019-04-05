@@ -48,9 +48,9 @@ interface ApplicationInterface extends \ArrayAccess
      *
      * @param string   $event    The unique name of the event.
      * @param string   $listener The unique name of the listener.
-     * @param callable $action   The closure or invokable object.
+     * @param callable $callback The closure or invokable object.
      */
-    public function subscribe(string $event, string $listener, callable $action);
+    public function subscribe(string $event, string $listener, callable $callback);
 
     /**
      * Notifies listeners about an event.
