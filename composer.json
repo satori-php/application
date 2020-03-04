@@ -1,6 +1,6 @@
 {
     "name": "satori/application",
-    "description": "Application",
+    "description": "Base application interface",
     "keywords": ["Satori", "framework", "di", "container", "event", "dispatcher"],
     "license": "MIT",
     "authors": [
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.2"
     },
     "autoload": {
         "psr-4": {

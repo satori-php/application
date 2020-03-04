@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace Satori\Application;
 
 /**
- * Interface for a Satori application.
+ * Base application interface.
  */
 interface ApplicationInterface extends \ArrayAccess
 {
@@ -24,15 +24,17 @@ interface ApplicationInterface extends \ArrayAccess
      *
      * @return object The service (object) instance.
      */
-    public function __get(string $id);
+    public function __get(string $id): object;
 
     /**
      * Sets a service (object) definition.
      *
      * @param string   $id         The unique name of the service (object).
      * @param callable $definition The closure or invokable object.
+     *
+     * @return void
      */
-    public function __set(string $id, callable $definition);
+    public function __set(string $id, callable $definition): void;
 
     /**
      * Checks if a service (object) definition is set.
@@ -49,16 +51,20 @@ interface ApplicationInterface extends \ArrayAccess
      * @param string   $event    The unique name of the event.
      * @param string   $listener The unique name of the listener.
      * @param callable $callback The closure or invokable object.
+     *
+     * @return void
      */
-    public function subscribe(string $event, string $listener, callable $callback);
+    public function subscribe(string $event, string $listener, callable $callback): void;
 
     /**
      * Notifies listeners about an event.
      *
      * @param string $event     The unique name of the event.
      * @param array  $arguments Arguments for event actions.
+     *
+     * @return void
      */
-    public function notify(string $event, array $arguments = null);
+    public function notify(string $event, array $arguments = null): void;
 
     /**
      * Runs an application.
