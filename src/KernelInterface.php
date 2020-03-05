@@ -13,7 +13,7 @@ namespace Satori\Application;
 /**
  * Base application interface.
  */
-interface ApplicationInterface extends \ArrayAccess
+interface KernelInterface extends \ArrayAccess
 {
     /**
      * Returns a service (object).
