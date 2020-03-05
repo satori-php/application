@@ -8,9 +8,9 @@ declare(strict_types=1);
 
 namespace My\Super;
 
-use Satori\Application\ApplicationInterface;
+use Satori\Application\KernelInterface;
 
-class Application implements ApplicationInterface
+class Application implements KernelInterface
 {
     public function __get(string $id): object
     {
